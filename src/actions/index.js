@@ -16,3 +16,17 @@ export const reset = () => {
         type:  'RESET'
     }
 }
+
+
+export const signIn = () => {
+    return {
+        type:  'SIGN_IN'
+    }
+}
+
+
+export const signOff = () => {
+    return {
+        type:  'SIGN_OFF'
+    }
+}

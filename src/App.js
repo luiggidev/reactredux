@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, reset } from './actions';
+import { increment, decrement, reset, signIn, signOff } from './actions';
 
 function App() {
   const counter = useSelector(state => state.counter);
@@ -15,6 +15,9 @@ function App() {
       <button onClick={() => dispatch(reset())}>Reset</button>
       <br />
       <button onClick={() => dispatch(increment(5))}>Add 5</button>
+      <br />
+      <button onClick={() => dispatch(signIn())}>signIn</button>
+      <button onClick={() => dispatch(signOff())}>signOff</button>
 
       { isLogged ? <h3>valuable information I shoulndt see</h3> : '' }
     </div>
